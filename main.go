@@ -9,10 +9,11 @@ var redis_ip = flag.String("redis_ip", "192.168.59.103", "IP Address for redis")
 var redis_port = flag.String("redis_port", "6379", "Port for redis")
 var open_connections = flag.Int("connections", 10, "Open connections at a time")
 
-var server = fmt.Sprint(*redis_ip) + ":" + fmt.Sprint(*redis_port)
+var server = ""
 
 func main() {
 	flag.Parse()
+	server = fmt.Sprint(*redis_ip) + ":" + fmt.Sprint(*redis_port)
 
 	for i := 0; i < *open_connections; i++ {
 		go dowork(i)
