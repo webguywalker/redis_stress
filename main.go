@@ -5,7 +5,7 @@ import "fmt"
 import "time"
 import "flag"
 
-var redis_ip = flag.String("redis_ip", "192.168.59.103", "IP Address for redis")
+var redis_ip = flag.String("redis_ip", "000.000.000.000", "IP Address for redis")
 var redis_port = flag.String("redis_port", "6379", "Port for redis")
 var open_connections = flag.Int("connections", 10, "Open connections at a time")
 
